@@ -38,8 +38,8 @@ bool GameLayer::init()
 
 bool GameLayer::createPools()
 {
-    m_fruitFallingIndex = 0;
-    m_fruitPool = Array::createWithCapacity( 20 );
+    m_goibaBadFallingIndex = 0;
+    m_goibaBadPool = Array::createWithCapacity( 20 );
 
 	Character* character;
 
@@ -53,26 +53,19 @@ bool GameLayer::createPools()
 		strcpy(buffer , walk );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
 		character = Character::create( buffer );
-		character->addAnimation( walk , Character::createAnimationWithName( walk , 40 , 24.0f , true ) );
+		character->addAnimation( walk , Character::createAnimationWithName( walk , 40 , 60.0f , true ) );
 		
 		strcpy(buffer , falling );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
-		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 24.0f , true ) );
+		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 60.0f , true ) );
 
-		m_fruitPool->addObject(character);
+		m_goibaBadPool->addObject(character);
     }
 
-    m_fruitPool->retain();
+    m_goibaBadPool->retain();
+
 	
-	/*
-	character->setPosition( ccp ( 200, 100 ) );
-	character->gotoAndPlay( walk );
-	
-	Vector<FiniteTimeAction *> actions;
-	actions.pushBack( RotateTo::create( 1 , -20 ) );
-	actions.pushBack( RotateTo::create( 1 , 20 ) );
-	character->play(actions);
-	this->addChild( character );*/
+	m_goibaGoodPool = Array::createWithCapacity(20);
 
 	strcpy(walk , "goiba_good_waking" );
 	strcpy(falling , "goiba_good_falling" );
@@ -82,15 +75,26 @@ bool GameLayer::createPools()
 		strcpy(buffer , walk );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
 		character = Character::create( buffer );
-		character->addAnimation( walk , Character::createAnimationWithName( walk , 40 , 24.0f , true ) );
+		character->addAnimation( walk , Character::createAnimationWithName( walk , 19 , 60.0f , true ) );
 
 		strcpy(buffer , falling );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
-		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 24.0f , true ) );
+		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 60.0f , true ) );
 
-		m_fruitPool->addObject(character);
+		m_goibaGoodPool->addObject(character);
 	}
 
+	m_goibaGoodPool->retain();
+
+	
+	character->setPosition( ccp ( 200, 100 ) );
+	character->gotoAndPlay( walk );
+	
+	Vector<FiniteTimeAction *> actions;
+	actions.pushBack( RotateTo::create( 1 , -20 ) );
+	actions.pushBack( RotateTo::create( 1 , 20 ) );
+	character->play(actions);
+	this->addChild( character );
 
     return true;
 }
@@ -98,11 +102,23 @@ bool GameLayer::createPools()
 bool GameLayer::createActions()
 {
     
-    m_fruitInterval = 5;
-    m_fruitTime = 0;
+
+	m_goibaBadInterval = 5;
+	m_goibaBadTime = 0;
+ 
+	m_goibaGoodTime = 0;
+	m_goibaGoodInterval = 5;
     
     
-    
+    	/*
+	character->setPosition( ccp ( 200, 100 ) );
+	character->gotoAndPlay( walk );
+	
+	Vector<FiniteTimeAction *> actions;
+	actions.pushBack( RotateTo::create( 1 , -20 ) );
+	actions.pushBack( RotateTo::create( 1 , 20 ) );
+	character->play(actions);
+	this->addChild( character );*/
     
     return true;
 }

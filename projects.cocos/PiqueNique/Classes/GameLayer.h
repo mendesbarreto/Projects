@@ -36,7 +36,7 @@ private:
 
 	int m_goibaGoodFallingIndex;
 	float m_goibaGoodTime;
-	float m_goibaBadInterval;
+	float m_goibaGoodInterval;
     
     Action* m_swingFruit;
     Action* m_fruitFall;

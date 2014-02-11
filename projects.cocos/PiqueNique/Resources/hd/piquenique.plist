@@ -537,7 +537,7 @@
                 <key>sourceSize</key>
                 <string>{83,140}</string>
             </dict>
-            <key>goiba_good_falling.png</key>
+            <key>goiba_good_falling1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{512,429},{114,145}}</string>
@@ -550,7 +550,7 @@
                 <key>sourceSize</key>
                 <string>{114,145}</string>
             </dict>
-            <key>goiba_good_waking0001.png</key>
+            <key>goiba_good_waking1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{628,429},{101,140}}</string>
@@ -563,7 +563,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0002.png</key>
+            <key>goiba_good_waking10.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{731,429},{101,140}}</string>
@@ -576,7 +576,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0003.png</key>
+            <key>goiba_good_waking11.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{834,429},{101,140}}</string>
@@ -589,7 +589,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0004.png</key>
+            <key>goiba_good_waking12.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,576},{101,140}}</string>
@@ -602,7 +602,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0005.png</key>
+            <key>goiba_good_waking13.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{105,576},{101,140}}</string>
@@ -615,7 +615,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0006.png</key>
+            <key>goiba_good_waking14.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{208,576},{101,140}}</string>
@@ -628,7 +628,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0007.png</key>
+            <key>goiba_good_waking15.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{311,576},{101,140}}</string>
@@ -641,7 +641,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0008.png</key>
+            <key>goiba_good_waking16.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{414,576},{101,140}}</string>
@@ -654,7 +654,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0009.png</key>
+            <key>goiba_good_waking17.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{517,576},{101,140}}</string>
@@ -667,7 +667,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0010.png</key>
+            <key>goiba_good_waking18.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{620,576},{101,140}}</string>
@@ -680,7 +680,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0011.png</key>
+            <key>goiba_good_waking19.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{723,576},{101,140}}</string>
@@ -693,7 +693,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0012.png</key>
+            <key>goiba_good_waking2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{826,576},{101,140}}</string>
@@ -706,7 +706,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0013.png</key>
+            <key>goiba_good_waking3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,718},{101,140}}</string>
@@ -719,7 +719,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0014.png</key>
+            <key>goiba_good_waking4.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{105,718},{101,140}}</string>
@@ -732,7 +732,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0015.png</key>
+            <key>goiba_good_waking5.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{208,718},{101,140}}</string>
@@ -745,7 +745,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0016.png</key>
+            <key>goiba_good_waking6.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{311,718},{101,140}}</string>
@@ -758,7 +758,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0017.png</key>
+            <key>goiba_good_waking7.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{414,718},{101,140}}</string>
@@ -771,7 +771,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0018.png</key>
+            <key>goiba_good_waking8.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{517,718},{101,140}}</string>
@@ -784,7 +784,7 @@
                 <key>sourceSize</key>
                 <string>{101,140}</string>
             </dict>
-            <key>goiba_good_waking0019.png</key>
+            <key>goiba_good_waking9.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{620,718},{101,140}}</string>
@@ -807,7 +807,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:11ae020e99f5ad4d2b9a9a1eeec12c94:424b65548f1b58e65da6f82d224b0a4e:1016886e1381b62928217e6ea84e40b6$</string>
+            <string>$TexturePacker:SmartUpdate:e7b02d101a798cd4bf9bacddcd556e4c:c7b8be95d152f772e5fcbc6090a6bff7:1016886e1381b62928217e6ea84e40b6$</string>
             <key>textureFileName</key>
             <string>piquenique.png</string>
         </dict>
