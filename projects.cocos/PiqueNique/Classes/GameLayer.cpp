@@ -1,5 +1,5 @@
 #include "GameLayer.h"
-
+#include "Character.h"
 USING_NS_CC;
 
 Scene* GameLayer::createScene()
@@ -26,7 +26,9 @@ bool GameLayer::init()
     {
         return false;
     }
-    
+
+	SpriteFrameCache::getInstance()->addSpriteFramesWithFile( "piquenique.plist" );
+
     this->createScreen();
     this->createPools();
     this->createActions();
@@ -37,13 +39,59 @@ bool GameLayer::init()
 bool GameLayer::createPools()
 {
     m_fruitFallingIndex = 0;
-    m_fruitPool = CCArray::createWithCapacity( 20 );
-    
-    for ( int i = 0 ; i < 20 ; i++) {
-        
+    m_fruitPool = Array::createWithCapacity( 20 );
+
+	Character* character;
+
+	char name[30] = "goiba_bad";
+	char walk[30] = "goiba_bad_walk";
+	char falling[30] = "goiba_bad_falling";
+	char buffer[100];
+
+	for ( int i = 1 ; i < 20 ; i++) 
+	{
+		strcpy(buffer , walk );
+		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
+		character = Character::create( buffer );
+		character->addAnimation( walk , Character::createAnimationWithName( walk , 40 , 24.0f , true ) );
+		
+		strcpy(buffer , falling );
+		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
+		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 24.0f , true ) );
+
+		m_fruitPool->addObject(character);
     }
-    
-    
+
+    m_fruitPool->retain();
+	
+	/*
+	character->setPosition( ccp ( 200, 100 ) );
+	character->gotoAndPlay( walk );
+	
+	Vector<FiniteTimeAction *> actions;
+	actions.pushBack( RotateTo::create( 1 , -20 ) );
+	actions.pushBack( RotateTo::create( 1 , 20 ) );
+	character->play(actions);
+	this->addChild( character );*/
+
+	strcpy(walk , "goiba_good_waking" );
+	strcpy(falling , "goiba_good_falling" );
+
+	for ( int i = 1 ; i < 20 ; i++) 
+	{
+		strcpy(buffer , walk );
+		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
+		character = Character::create( buffer );
+		character->addAnimation( walk , Character::createAnimationWithName( walk , 40 , 24.0f , true ) );
+
+		strcpy(buffer , falling );
+		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
+		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 24.0f , true ) );
+
+		m_fruitPool->addObject(character);
+	}
+
+
     return true;
 }
 
@@ -61,12 +109,12 @@ bool GameLayer::createActions()
 
 bool GameLayer::createScreen()
 {
-    m_screenSize = CCDirector::sharedDirector()->getWinSize();
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("piquenique.plist");
-    m_batch = CCSpriteBatchNode::create( "piquenique.png" );
+    m_screenSize = Director::sharedDirector()->getWinSize();
+    SpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("piquenique.plist");
+    m_batch = SpriteBatchNode::create( "piquenique.png" );
     this->addChild(m_batch);
     
-    m_background = CCSprite::create("background.jpg");
+    m_background = Sprite::create("background.jpg");
     m_background->setPosition(
                               ccp( m_background->boundingBox().size.width * 0.5f
                                    , m_background->boundingBox().size.height * 0.5f));

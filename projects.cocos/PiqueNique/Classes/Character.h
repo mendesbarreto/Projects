@@ -13,35 +13,44 @@
 
 using namespace cocos2d;
 
-class Character : CCSprite
+class Character : public CCSprite
 {
 private:
-    CCString* m_currentState;
-    CCString* m_name;
-    CCArray* m_states;
+	char* m_name;
+    char* m_animation;
+	Animation* m_currentAnimation;
+    Dictionary* m_animations;
     Character(void);
     
 public:
     
-    static Character* createWithFrameName( const char* frameName );
-    static Animation* createAnimationWithName( const char* name );
+    static Character* create( const char* frameName );
+	static Animation* createAnimationWithName( 
+		const char* sequenceName, 
+		int frames , 
+		float delay , 
+		bool restoreOriginalFrame);
     
-    void addAnimation( Animation* anim );
+    void addAnimation( const char* name, Animation* anim );
     void gotoAndPlay( const char* state );
     void gotoAndStop( const char* state );
-    Character( const char* frameName );
-    
-    CCArray* getStates()
+	void setCallbackOnAnimationComplete( const char* name , CallFuncN* callback );
+
+	void stop();
+	void play();
+	void play( Vector<FiniteTimeAction*> &actions );
+
+    Dictionary* getStates()
     {
-        return m_states;
+        return m_animations;
     }
     
-    CCString* getCurrentState()
+    const char* getCurrentState()
     {
-        return m_currentState;
+        return m_animation;
     }
     
-    CCString* getName()
+    const char* getName()
     {
         return m_name;
     }

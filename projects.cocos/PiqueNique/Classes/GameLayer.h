@@ -22,23 +22,28 @@ public:
     
     
 private:
-    CCSpriteBatchNode* m_batch;
+    SpriteBatchNode* m_batch;
     
-    CCSize m_screenSize;
+    Size m_screenSize;
     
-    CCArray* m_fruitPool;
+    Array* m_goibaBadPool;
     
-    int m_fruitFallingIndex;
-    float m_fruitTime;
-    float m_fruitInterval;
+    int m_goibaBadFallingIndex;
+    float m_goibaBadTime;
+    float m_goibaBadInterval;
+
+	Array* m_goibaGoodPool;
+
+	int m_goibaGoodFallingIndex;
+	float m_goibaGoodTime;
+	float m_goibaBadInterval;
     
-    CCAction* m_swingFruit;
-    CCAction* m_fruitFall;
+    Action* m_swingFruit;
+    Action* m_fruitFall;
     
     
-    CCSprite* m_player;
-    CCSprite* m_background;
-    
+    Sprite* m_player;
+    Sprite* m_background;
     
     bool createActions();
     bool createScreen();
