@@ -40,6 +40,7 @@ bool GameLayer::init()
 	auto m_aceleration_listener = EventListenerAcceleration::create( CC_CALLBACK_2( GameLayer::onAcelerationHandler, this ) );
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( m_aceleration_listener , 100 );
 
+	Director::getInstance()->get
 	this->setAccelerometerEnabled( true );
 
 	this->schedule( schedule_selector( GameLayer::update ) );
@@ -263,7 +264,7 @@ void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 
     m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
 	m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
-
+	
 	if( ac->x < -0.01 )
 	{
 		m_left = true;
