@@ -60,7 +60,6 @@ void GameLayer::createPlayer()
 
 void GameLayer::update( float dt )
 {
-
 	m_goibaGoodTime += dt;
 
 	if( m_goibaGoodTime > m_goibaGoodInterval )
@@ -70,8 +69,17 @@ void GameLayer::update( float dt )
 		this->createGoodGoiba();
 	}
     
-    m_player->setPositionX( m_player->getPositionX() + m_playerSpeed );
-    
+	float limitRight = m_screenSize.width - m_player->boundingBox().size.width * 0.5f;
+	float limitLeft = m_player->boundingBox().size.width * 0.5f;
+
+	float posX = m_player->getPositionX() + m_playerSpeed;
+
+	if( posX < limitLeft )
+		posX = limitLeft;
+	else if( posX > limitRight )
+		posX = limitRight;
+
+	m_player->setPositionX( posX ); 
 }
 
 
@@ -249,9 +257,13 @@ void GameLayer::goibaGoodFinishFalling( Node* pSender )
 
 void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 {
-    
-    m_playerSpeed = ac->x * 10;
-    
+	float deceleration = 0.1f; 
+	float sensitivity = 8.0f; 
+	float maxVelocity = 50;
+
+    m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
+	m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
+
 	if( ac->x < -0.01 )
 	{
 		m_left = true;
