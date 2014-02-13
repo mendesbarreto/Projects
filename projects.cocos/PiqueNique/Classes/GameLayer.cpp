@@ -91,12 +91,14 @@ void GameLayer::update( float dt )
 
 void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 {
-	float deceleration = 0.1f; 
-	float sensitivity = 8.0f; 
-	float maxVelocity = 50;
+	//float deceleration = 0.1f; 
+	//float sensitivity = 8.0f; 
+	//float maxVelocity = 50;
 
-	m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
-	m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
+	m_playerSpeed = 10 * ( powf ( ( -fabsf(ac->x ) + 0.5), 2.0) - 1.25) * ac->y;
+
+	//m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
+	//m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
 
 	CCLOG("PlayerSpeed: %f , Accelerometer: %f ", m_playerSpeed , ac->x );
 }
