@@ -16,9 +16,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLView::create("My Game");
+        glview = GLView::create("Pique Nique");
         director->setOpenGLView(glview);
     }
+	
+	if ( CC_PLATFORM_WIN32 == CC_TARGET_PLATFORM )
+	{
+		glview->setFrameSize( 1024 , 768 );
+	}
+
+	glview->setDesignResolutionSize( 2048, 1536, kResolutionExactFit );	
 
     // turn on display FPS
     director->setDisplayStats(true);

@@ -31,19 +31,24 @@ bool GameLayer::init()
 
 	srand( time(NULL) );
 
-	m_player = Character::create( "emilia_narizinho1.png" );
-	m_player->addAnimation( "walk" , Character::createAnimationWithName("emilia_narizinho" , 20, 60 , true ) );
-
-
-
     this->createScreen();
     this->createPools();
     this->createActions();
-
+	this->createPlayer();
 
 	this->schedule( schedule_selector( GameLayer::update ) );
 
     return true;
+}
+
+void GameLayer::createPlayer()
+{
+	m_player = Character::create( "emilia_narizinho1.png" );
+	m_player->addAnimation( "walk" , Character::createAnimationWithName("emilia_narizinho" , 20, 60 , true ) );
+	m_player->setPosition( ccp( m_player->boundingBox().size.width + 20 , m_player->boundingBox().size.height + 100) );
+	m_player->setPosition( ccp( 200 , 200) );
+	
+	this->addChild( m_player );
 }
 
 
@@ -203,6 +208,9 @@ void GameLayer::createGoodGoiba()
 	
 	Character* c = (Character* ) m_goibaGoodPool->objectAtIndex( m_goibaGoodPoolIndex );
 	m_goibaGoodPoolIndex++;
+
+	if( m_goibaGoodPoolIndex > 20 )
+		m_goibaGoodPoolIndex = 0;
 
 	c->stopAllActions();
 	c->setPosition( ccp( initialPosX , m_screenSize.height + c->boundingBox().size.height * 0.5f ) );

@@ -57,6 +57,7 @@ private:
 
 	void createGoodGoiba();
 	void goibaGoodFinishFalling( Node* pSender );
+	void createPlayer();
 };
 
 #endif // __HELLOWORLD_SCENE_H__
