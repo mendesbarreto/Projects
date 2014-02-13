@@ -45,7 +45,10 @@ private:
 
     Sprite* m_background;
     Character* m_player;
-
+	
+	bool m_left;
+	bool m_right;
+	
 	void update( float dt );
     bool createActions();
     bool createScreen();
