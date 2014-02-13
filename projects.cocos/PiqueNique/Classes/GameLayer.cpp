@@ -29,7 +29,7 @@ bool GameLayer::init()
 
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile( "piquenique.plist" );
 
-
+	srand( time(NULL) );
 
 	m_player = Character::create( "emilia_narizinho1.png" );
 	m_player->addAnimation( "walk" , Character::createAnimationWithName("emilia_narizinho" , 20, 60 , true ) );
@@ -147,7 +147,7 @@ bool GameLayer::onT( Touch* touch, Event* event )
 
 bool GameLayer::createActions()
 {
-	m_goibaSpeed = 10;
+	m_goibaSpeed = 10.0f;
 
 	m_goibaBadInterval = 5;
 	m_goibaBadTime = 0;
@@ -207,16 +207,20 @@ void GameLayer::createGoodGoiba()
 	c->stopAllActions();
 	c->setPosition( ccp( initialPosX , m_screenSize.height + c->boundingBox().size.height * 0.5f ) );
 
-	Vector<FiniteTimeAction *> actions;
-	actions.pushBack( RotateTo::create( 1 , -20 ) );
-	actions.pushBack( RotateTo::create( 1 , 20 ) );
+	Vector<FiniteTimeAction *> actionsRotate;
+	actionsRotate.pushBack( RotateTo::create( 1 , -20 ) );
+	actionsRotate.pushBack( RotateTo::create( 1 , 20 ) );
 
-	Sequence* sequence = Sequence::create( MoveTo::create( 10.0f, ccp( 0.0f , 0.0f )));
-	
+	FiniteTimeAction* actionMove = MoveTo::create( (float) m_goibaSpeed , ccp( (float) initialPosX , 0 ) );
+	FiniteTimeAction* actionMoveDone = CallFuncN::create( this , callfuncN_selector( GameLayer::goibaGoodFinishFalling ) );
+	FiniteTimeAction* seq = Sequence::createWithTwoActions( actionMove , actionMoveDone );
+
 	c->setVisible(true);
 	c->gotoAndPlay( "goiba_good_falling" );
-	c->play( actions );
-	c->runAction( sequence );
+	c->play( actionsRotate );
+	c->runAction( seq );
+
+	//c->runAction( sequence );
 
 }
 
