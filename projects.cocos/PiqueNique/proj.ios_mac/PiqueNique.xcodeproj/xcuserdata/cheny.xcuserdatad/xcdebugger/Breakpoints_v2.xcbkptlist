@@ -56,12 +56,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameLayer.cpp"
-            timestampString = "414023000.261814"
+            timestampString = "414027326.605012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
-            landmarkName = "GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "GameLayer::goibaGoodFinishFalling( Node* pSender )"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -98,18 +98,7 @@ void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 	m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
 	m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
 
-	if( m_playerSpeed < 0 )
-	{
-		m_left = true;
-		m_right = false;
-		CCLOG( "GOTO LEFT" );
-	}else if( m_playerSpeed > 0 )
-	{
-		m_left = false;
-		m_right = true;
-
-		CCLOG( "GOTO RIGHT" );
-	}
+	CCLOG("PlayerSpeed: %f , Accelerometer: %f ", m_playerSpeed , ac->x );
 }
 
 
