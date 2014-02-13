@@ -25,11 +25,9 @@ public:
 private:
 
     SpriteBatchNode* m_batch;
-    
     Size m_screenSize;
-    
     Array* m_goibaBadPool;
-    
+
     int m_goibaBadPoolIndex;
     float m_goibaBadTime;
     float m_goibaBadInterval;
@@ -52,8 +50,8 @@ private:
     bool createActions();
     bool createScreen();
     bool createPools();
-	bool onT( Touch* touch, Event* event );
-
+	//bool onT( Touch* touch, Event* event );
+	void onAcelerationHandler( Acceleration* ac , Event* event );
 
 	void createGoodGoiba();
 	void goibaGoodFinishFalling( Node* pSender );

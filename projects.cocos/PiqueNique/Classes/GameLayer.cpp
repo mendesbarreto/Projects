@@ -36,6 +36,12 @@ bool GameLayer::init()
     this->createActions();
 	this->createPlayer();
 
+
+	auto m_aceleration_listener = EventListenerAcceleration::create( CC_CALLBACK_2( GameLayer::onAcelerationHandler, this ) );
+	Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( m_aceleration_listener , 100 );
+
+	this->setAccelerometerEnabled( true );
+
 	this->schedule( schedule_selector( GameLayer::update ) );
 
     return true;
@@ -54,6 +60,7 @@ void GameLayer::createPlayer()
 
 void GameLayer::update( float dt )
 {
+
 	m_goibaGoodTime += dt;
 
 	if( m_goibaGoodTime > m_goibaGoodInterval )
@@ -141,13 +148,6 @@ bool GameLayer::createPools()
 	//Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( listener , 100);
 
     return true;
-}
-
-bool GameLayer::onT( Touch* touch, Event* event )
-{
-
-
-	return true;
 }
 
 bool GameLayer::createActions()
@@ -242,5 +242,10 @@ void GameLayer::goibaGoodFinishFalling( Node* pSender )
 		c->setVisible(false);
 	}
 
+}
+
+void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
+{
+	CCLOG( "ACELEROU LEGAL" );
 }
 
