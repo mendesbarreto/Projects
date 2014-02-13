@@ -37,10 +37,9 @@ bool GameLayer::init()
 	this->createPlayer();
 
 
-	auto m_aceleration_listener = EventListenerAcceleration::create( CC_CALLBACK_2( GameLayer::onAcelerationHandler, this ) );
+	EventListenerAcceleration* m_aceleration_listener = EventListenerAcceleration::create( CC_CALLBACK_2( GameLayer::onAcelerationHandler, this ) );
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( m_aceleration_listener , 100 );
 
-	Director::getInstance()->get
 	this->setAccelerometerEnabled( true );
 
 	this->schedule( schedule_selector( GameLayer::update ) );
@@ -76,13 +75,42 @@ void GameLayer::update( float dt )
 	float posX = m_player->getPositionX() + m_playerSpeed;
 
 	if( posX < limitLeft )
+	{
 		posX = limitLeft;
+		m_playerSpeed = 0;
+	}
 	else if( posX > limitRight )
+	{
 		posX = limitRight;
+		m_playerSpeed = 0;
+	}
 
 	m_player->setPositionX( posX ); 
 }
 
+
+void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
+{
+	float deceleration = 0.1f; 
+	float sensitivity = 8.0f; 
+	float maxVelocity = 50;
+
+	m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
+	m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
+
+	if( m_playerSpeed < 0 )
+	{
+		m_left = true;
+		m_right = false;
+		CCLOG( "GOTO LEFT" );
+	}else if( m_playerSpeed > 0 )
+	{
+		m_left = false;
+		m_right = true;
+
+		CCLOG( "GOTO RIGHT" );
+	}
+}
 
 
 bool GameLayer::createPools()
@@ -142,22 +170,6 @@ bool GameLayer::createPools()
 	}
 
 	m_goibaGoodPool->retain();
-
-	//character->setPosition( ccp ( 200, 100 ) );
-	//character->gotoAndPlay( walk );
-	
-	//Vector<FiniteTimeAction *> actions;
-	//actions.pushBack( RotateTo::create( 1 , -20 ) );
-	//actions.pushBack( RotateTo::create( 1 , 20 ) );
-	//character->play(actions);
-	//this->addChild( character );
-
-	//EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
-	//this->setTouchEnabled(true);
-	//listener->setSwallowTouches( true );
-	//listener->onTouchBegan = CC_CALLBACK_2( GameLayer::onT , this );
-
-	//Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( listener , 100);
 
     return true;
 }
@@ -256,32 +268,4 @@ void GameLayer::goibaGoodFinishFalling( Node* pSender )
 
 }
 
-void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
-{
-	float deceleration = 0.1f; 
-	float sensitivity = 8.0f; 
-	float maxVelocity = 50;
-
-    m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
-	m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
-
-	if( m_playerSpeed < 0 )
-	{
-		m_left = true;
-		m_right = false;
-		CCLOG( "GOTO LEFT" );
-	}else if( m_playerSpeed > 0 )
-	{
-		m_left = false;
-		m_right = true;
-
-		CCLOG( "GOTO RIGHT" );
-	}else
-	{
-		m_left = false;
-		m_right = false;
-		//CCLOG( "GOTO NOTHING" );
-
-	}
-}
 
