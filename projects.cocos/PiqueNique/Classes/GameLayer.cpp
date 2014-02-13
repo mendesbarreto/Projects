@@ -69,6 +69,9 @@ void GameLayer::update( float dt )
 		
 		this->createGoodGoiba();
 	}
+    
+    m_player->setPositionX( m_player->getPositionX() + m_playerSpeed );
+    
 }
 
 
@@ -206,12 +209,12 @@ void GameLayer::createGoodGoiba()
 
 	int initialPosX = rand() % (int) (m_screenSize.width * 0.8f ) + m_screenSize.width * 0.1f;
 	
+    if( m_goibaGoodPoolIndex > 19 )
+		m_goibaGoodPoolIndex = 0;
+    
 	Character* c = (Character* ) m_goibaGoodPool->objectAtIndex( m_goibaGoodPoolIndex );
 	m_goibaGoodPoolIndex++;
-
-	if( m_goibaGoodPoolIndex > 20 )
-		m_goibaGoodPoolIndex = 0;
-
+    
 	c->stopAllActions();
 	c->setPosition( ccp( initialPosX , m_screenSize.height + c->boundingBox().size.height * 0.5f ) );
 
@@ -246,22 +249,25 @@ void GameLayer::goibaGoodFinishFalling( Node* pSender )
 
 void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 {
-	if( ac->y < -0.25 )
-	{
-		m_left = false;
-		m_right = true;
-		CCLOG( "GOTO RIGHT" );
-	}else if( ac->y > 0.25 )
+    
+    m_playerSpeed = ac->x * 10;
+    
+	if( ac->x < -0.01 )
 	{
 		m_left = true;
 		m_right = false;
+		//CCLOG( "GOTO LEFT" );
+	}else if( ac->x > 0.01 )
+	{
+		m_left = false;
+		m_right = true;
 
-		CCLOG( "GOTO LEFT" );
+		//CCLOG( "GOTO RIGHT" );
 	}else
 	{
 		m_left = false;
 		m_right = false;
-		CCLOG( "GOTO NOTHING" );
+		//CCLOG( "GOTO NOTHING" );
 
 	}
 }

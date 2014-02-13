@@ -45,7 +45,8 @@ private:
 
     Sprite* m_background;
     Character* m_player;
-	
+	float m_playerSpeed;
+    
 	bool m_left;
 	bool m_right;
 	
