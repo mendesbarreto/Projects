@@ -246,6 +246,23 @@ void GameLayer::goibaGoodFinishFalling( Node* pSender )
 
 void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 {
-	CCLOG( "ACELEROU LEGAL" );
+	if( ac->y < -0.25 )
+	{
+		m_left = false;
+		m_right = true;
+		CCLOG( "GOTO RIGHT" );
+	}else if( ac->y > 0.25 )
+	{
+		m_left = true;
+		m_right = false;
+
+		CCLOG( "GOTO LEFT" );
+	}else
+	{
+		m_left = false;
+		m_right = false;
+		CCLOG( "GOTO NOTHING" );
+
+	}
 }
 
