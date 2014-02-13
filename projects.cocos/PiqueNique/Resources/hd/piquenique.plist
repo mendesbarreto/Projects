@@ -4,10 +4,270 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>emilia_narizinho1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho10.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho11.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho12.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho13.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho14.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho15.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho16.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho17.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho18.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho19.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho20.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,289},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho4.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho5.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,576},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho6.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,576},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho7.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,576},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho8.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,576},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
+            <key>emilia_narizinho9.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{475,2},{471,285}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{471,285}}</string>
+                <key>sourceSize</key>
+                <string>{471,285}</string>
+            </dict>
             <key>goiba_bad_falling1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{124,141}}</string>
+                <string>{{475,576},{124,141}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +280,7 @@
             <key>goiba_bad_walk1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{128,2},{83,140}}</string>
+                <string>{{601,576},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +293,7 @@
             <key>goiba_bad_walk10.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{213,2},{83,140}}</string>
+                <string>{{686,576},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +306,7 @@
             <key>goiba_bad_walk11.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{298,2},{83,140}}</string>
+                <string>{{771,576},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +319,7 @@
             <key>goiba_bad_walk12.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{383,2},{83,140}}</string>
+                <string>{{856,576},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +332,7 @@
             <key>goiba_bad_walk13.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{468,2},{83,140}}</string>
+                <string>{{2,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +345,7 @@
             <key>goiba_bad_walk14.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{553,2},{83,140}}</string>
+                <string>{{87,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +358,7 @@
             <key>goiba_bad_walk15.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{638,2},{83,140}}</string>
+                <string>{{172,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +371,7 @@
             <key>goiba_bad_walk16.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{723,2},{83,140}}</string>
+                <string>{{257,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +384,7 @@
             <key>goiba_bad_walk17.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{808,2},{83,140}}</string>
+                <string>{{342,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +397,7 @@
             <key>goiba_bad_walk18.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{893,2},{83,140}}</string>
+                <string>{{427,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +410,7 @@
             <key>goiba_bad_walk19.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,145},{83,140}}</string>
+                <string>{{512,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +423,7 @@
             <key>goiba_bad_walk2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{87,145},{83,140}}</string>
+                <string>{{597,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +436,7 @@
             <key>goiba_bad_walk20.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{172,145},{83,140}}</string>
+                <string>{{682,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +449,7 @@
             <key>goiba_bad_walk21.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{257,145},{83,140}}</string>
+                <string>{{767,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +462,7 @@
             <key>goiba_bad_walk22.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{342,145},{83,140}}</string>
+                <string>{{852,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +475,7 @@
             <key>goiba_bad_walk23.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{427,145},{83,140}}</string>
+                <string>{{937,863},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +488,7 @@
             <key>goiba_bad_walk24.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{512,145},{83,140}}</string>
+                <string>{{2,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +501,7 @@
             <key>goiba_bad_walk25.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{597,145},{83,140}}</string>
+                <string>{{87,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +514,7 @@
             <key>goiba_bad_walk26.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{682,145},{83,140}}</string>
+                <string>{{172,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -267,7 +527,7 @@
             <key>goiba_bad_walk27.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{767,145},{83,140}}</string>
+                <string>{{257,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -280,7 +540,7 @@
             <key>goiba_bad_walk28.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{852,145},{83,140}}</string>
+                <string>{{342,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -293,7 +553,7 @@
             <key>goiba_bad_walk29.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{937,145},{83,140}}</string>
+                <string>{{427,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -306,7 +566,7 @@
             <key>goiba_bad_walk3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,287},{83,140}}</string>
+                <string>{{512,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -319,7 +579,7 @@
             <key>goiba_bad_walk30.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{87,287},{83,140}}</string>
+                <string>{{597,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -332,7 +592,7 @@
             <key>goiba_bad_walk31.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{172,287},{83,140}}</string>
+                <string>{{682,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -345,7 +605,7 @@
             <key>goiba_bad_walk32.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{257,287},{83,140}}</string>
+                <string>{{767,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -358,7 +618,7 @@
             <key>goiba_bad_walk33.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{342,287},{83,140}}</string>
+                <string>{{852,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -371,7 +631,7 @@
             <key>goiba_bad_walk34.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{427,287},{83,140}}</string>
+                <string>{{937,1005},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -384,7 +644,7 @@
             <key>goiba_bad_walk35.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{512,287},{83,140}}</string>
+                <string>{{2,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -397,7 +657,7 @@
             <key>goiba_bad_walk36.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{597,287},{83,140}}</string>
+                <string>{{87,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -410,7 +670,7 @@
             <key>goiba_bad_walk37.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{682,287},{83,140}}</string>
+                <string>{{172,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -423,7 +683,7 @@
             <key>goiba_bad_walk38.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{767,287},{83,140}}</string>
+                <string>{{257,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -436,7 +696,7 @@
             <key>goiba_bad_walk39.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{852,287},{83,140}}</string>
+                <string>{{342,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -449,7 +709,7 @@
             <key>goiba_bad_walk4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{937,287},{83,140}}</string>
+                <string>{{427,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -462,7 +722,7 @@
             <key>goiba_bad_walk40.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,429},{83,140}}</string>
+                <string>{{512,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -475,7 +735,7 @@
             <key>goiba_bad_walk5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{87,429},{83,140}}</string>
+                <string>{{597,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -488,7 +748,7 @@
             <key>goiba_bad_walk6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{172,429},{83,140}}</string>
+                <string>{{682,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -501,7 +761,7 @@
             <key>goiba_bad_walk7.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{257,429},{83,140}}</string>
+                <string>{{767,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -514,7 +774,7 @@
             <key>goiba_bad_walk8.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{342,429},{83,140}}</string>
+                <string>{{852,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -527,7 +787,7 @@
             <key>goiba_bad_walk9.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{427,429},{83,140}}</string>
+                <string>{{937,1147},{83,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -540,7 +800,7 @@
             <key>goiba_good_falling1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{512,429},{114,145}}</string>
+                <string>{{2,1289},{114,145}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -553,7 +813,7 @@
             <key>goiba_good_waking1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{628,429},{101,140}}</string>
+                <string>{{118,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -566,7 +826,7 @@
             <key>goiba_good_waking10.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{731,429},{101,140}}</string>
+                <string>{{221,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -579,7 +839,7 @@
             <key>goiba_good_waking11.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{834,429},{101,140}}</string>
+                <string>{{324,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -592,7 +852,7 @@
             <key>goiba_good_waking12.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,576},{101,140}}</string>
+                <string>{{427,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -605,7 +865,7 @@
             <key>goiba_good_waking13.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{105,576},{101,140}}</string>
+                <string>{{530,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -618,7 +878,7 @@
             <key>goiba_good_waking14.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{208,576},{101,140}}</string>
+                <string>{{633,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -631,7 +891,7 @@
             <key>goiba_good_waking15.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{311,576},{101,140}}</string>
+                <string>{{736,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -644,7 +904,7 @@
             <key>goiba_good_waking16.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{414,576},{101,140}}</string>
+                <string>{{839,1289},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -657,7 +917,7 @@
             <key>goiba_good_waking17.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{517,576},{101,140}}</string>
+                <string>{{2,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -670,7 +930,7 @@
             <key>goiba_good_waking18.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{620,576},{101,140}}</string>
+                <string>{{105,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -683,7 +943,7 @@
             <key>goiba_good_waking19.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{723,576},{101,140}}</string>
+                <string>{{208,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -696,7 +956,7 @@
             <key>goiba_good_waking2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{826,576},{101,140}}</string>
+                <string>{{311,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -709,7 +969,7 @@
             <key>goiba_good_waking3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,718},{101,140}}</string>
+                <string>{{414,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -722,7 +982,7 @@
             <key>goiba_good_waking4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{105,718},{101,140}}</string>
+                <string>{{517,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -735,7 +995,7 @@
             <key>goiba_good_waking5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{208,718},{101,140}}</string>
+                <string>{{620,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -748,7 +1008,7 @@
             <key>goiba_good_waking6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{311,718},{101,140}}</string>
+                <string>{{723,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -761,7 +1021,7 @@
             <key>goiba_good_waking7.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{414,718},{101,140}}</string>
+                <string>{{826,1436},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -774,7 +1034,7 @@
             <key>goiba_good_waking8.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{517,718},{101,140}}</string>
+                <string>{{2,1578},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -787,7 +1047,7 @@
             <key>goiba_good_waking9.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{620,718},{101,140}}</string>
+                <string>{{105,1578},{101,140}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -805,9 +1065,9 @@
             <key>realTextureFileName</key>
             <string>piquenique.png</string>
             <key>size</key>
-            <string>{1024,1024}</string>
+            <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e7b02d101a798cd4bf9bacddcd556e4c:c7b8be95d152f772e5fcbc6090a6bff7:1016886e1381b62928217e6ea84e40b6$</string>
+            <string>$TexturePacker:SmartUpdate:bb61f40bd801adcea282f742a65ab424:9ec4a02da082397d61d97ca40ea60f17:1016886e1381b62928217e6ea84e40b6$</string>
             <key>textureFileName</key>
             <string>piquenique.png</string>
         </dict>

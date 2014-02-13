@@ -2,6 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Character.h"
 
 using namespace cocos2d;
 
@@ -22,32 +23,40 @@ public:
     
     
 private:
+
     SpriteBatchNode* m_batch;
     
     Size m_screenSize;
     
     Array* m_goibaBadPool;
     
-    int m_goibaBadFallingIndex;
+    int m_goibaBadPoolIndex;
     float m_goibaBadTime;
     float m_goibaBadInterval;
 
+	float m_goibaSpeed;
+	float m_goibaTargetX;
+
 	Array* m_goibaGoodPool;
 
-	int m_goibaGoodFallingIndex;
+	int m_goibaGoodPoolIndex;
 	float m_goibaGoodTime;
 	float m_goibaGoodInterval;
     
-    Action* m_swingFruit;
-    Action* m_fruitFall;
-    
-    
-    Sprite* m_player;
+    Vector<FiniteTimeAction *> m_goiba_actions;
+
     Sprite* m_background;
-    
+    Character* m_player;
+
+	void update( float dt );
     bool createActions();
     bool createScreen();
     bool createPools();
+	bool onT( Touch* touch, Event* event );
+
+
+	void createGoodGoiba();
+	void goibaGoodFinishFalling( Node* pSender );
 };
 
 #endif // __HELLOWORLD_SCENE_H__

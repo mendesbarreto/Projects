@@ -29,16 +29,43 @@ bool GameLayer::init()
 
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile( "piquenique.plist" );
 
+
+
+	m_player = Character::create( "emilia_narizinho1.png" );
+	m_player->addAnimation( "walk" , Character::createAnimationWithName("emilia_narizinho" , 20, 60 , true ) );
+
+
+
     this->createScreen();
     this->createPools();
     this->createActions();
 
+
+	this->schedule( schedule_selector( GameLayer::update ) );
+
     return true;
 }
 
+
+void GameLayer::update( float dt )
+{
+	m_goibaGoodTime += dt;
+
+	if( m_goibaGoodTime > m_goibaGoodInterval )
+	{
+		m_goibaGoodTime = 0;
+		
+		this->createGoodGoiba();
+	}
+}
+
+
+
 bool GameLayer::createPools()
 {
-    m_goibaBadFallingIndex = 0;
+    m_goibaGoodPoolIndex = 0;
+	m_goibaBadPoolIndex = 0;
+
     m_goibaBadPool = Array::createWithCapacity( 20 );
 
 	Character* character;
@@ -58,6 +85,9 @@ bool GameLayer::createPools()
 		strcpy(buffer , falling );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
 		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 60.0f , true ) );
+		
+		character->setVisible(false);
+		this->addChild(character);
 
 		m_goibaBadPool->addObject(character);
     }
@@ -80,28 +110,44 @@ bool GameLayer::createPools()
 		strcpy(buffer , falling );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
 		character->addAnimation( falling , Character::createAnimationWithName( falling , 1 , 60.0f , true ) );
+		
+		character->setVisible(false);
+		this->addChild(character);
 
 		m_goibaGoodPool->addObject(character);
 	}
 
 	m_goibaGoodPool->retain();
 
+	//character->setPosition( ccp ( 200, 100 ) );
+	//character->gotoAndPlay( walk );
 	
-	character->setPosition( ccp ( 200, 100 ) );
-	character->gotoAndPlay( walk );
-	
-	Vector<FiniteTimeAction *> actions;
-	actions.pushBack( RotateTo::create( 1 , -20 ) );
-	actions.pushBack( RotateTo::create( 1 , 20 ) );
-	character->play(actions);
-	this->addChild( character );
+	//Vector<FiniteTimeAction *> actions;
+	//actions.pushBack( RotateTo::create( 1 , -20 ) );
+	//actions.pushBack( RotateTo::create( 1 , 20 ) );
+	//character->play(actions);
+	//this->addChild( character );
+
+	//EventListenerTouchOneByOne* listener = EventListenerTouchOneByOne::create();
+	//this->setTouchEnabled(true);
+	//listener->setSwallowTouches( true );
+	//listener->onTouchBegan = CC_CALLBACK_2( GameLayer::onT , this );
+
+	//Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( listener , 100);
 
     return true;
 }
 
+bool GameLayer::onT( Touch* touch, Event* event )
+{
+
+
+	return true;
+}
+
 bool GameLayer::createActions()
 {
-    
+	m_goibaSpeed = 10;
 
 	m_goibaBadInterval = 5;
 	m_goibaBadTime = 0;
@@ -109,7 +155,8 @@ bool GameLayer::createActions()
 	m_goibaGoodTime = 0;
 	m_goibaGoodInterval = 5;
     
-    
+	m_goiba_actions.pushBack( RotateTo::create( 1 , -20 ) );
+	m_goiba_actions.pushBack( RotateTo::create( 1 , 20 ) );
     	/*
 	character->setPosition( ccp ( 200, 100 ) );
 	character->gotoAndPlay( walk );
@@ -147,3 +194,41 @@ void GameLayer::menuCloseCallback(Object* pSender)
     exit(0);
 #endif
 }
+
+void GameLayer::createGoodGoiba()
+{
+	//if( m_goibaGoodPool->count() > 10 ) return;
+
+	int initialPosX = rand() % (int) (m_screenSize.width * 0.8f ) + m_screenSize.width * 0.1f;
+	
+	Character* c = (Character* ) m_goibaGoodPool->objectAtIndex( m_goibaGoodPoolIndex );
+	m_goibaGoodPoolIndex++;
+
+	c->stopAllActions();
+	c->setPosition( ccp( initialPosX , m_screenSize.height + c->boundingBox().size.height * 0.5f ) );
+
+	Vector<FiniteTimeAction *> actions;
+	actions.pushBack( RotateTo::create( 1 , -20 ) );
+	actions.pushBack( RotateTo::create( 1 , 20 ) );
+
+	Sequence* sequence = Sequence::create( MoveTo::create( 10.0f, ccp( 0.0f , 0.0f )));
+	
+	c->setVisible(true);
+	c->gotoAndPlay( "goiba_good_falling" );
+	c->play( actions );
+	c->runAction( sequence );
+
+}
+
+void GameLayer::goibaGoodFinishFalling( Node* pSender )
+{
+	Character* c = (Character* ) pSender;
+	
+	if( pSender )
+	{
+		c->stopAllActions();
+		c->setVisible(false);
+	}
+
+}
+

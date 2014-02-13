@@ -68,7 +68,6 @@ Animation* Character::createAnimationWithName( const char* sequenceName,
 		{
 			anim->addSpriteFrame( frame );
 		}
-
 	}
 
 	anim->setDelayPerUnit( 1 / delay );
