@@ -95,7 +95,7 @@ void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 	//float sensitivity = 8.0f; 
 	//float maxVelocity = 50;
 
-	m_playerSpeed = 10 * ( powf ( ( -fabsf(ac->x ) + 0.5), 2.0) - 1.25) * ac->y;
+	m_playerSpeed =  640 * ( powf ( ( - fabsf( ac->x) + 0.5), 2.0) - 1.25) * ac->y; //(I use sensitivity = 640.0);
 
 	//m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
 	//m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
