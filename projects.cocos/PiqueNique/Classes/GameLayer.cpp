@@ -26,7 +26,6 @@ bool GameLayer::init()
     {
         return false;
     }
-
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile( "piquenique.plist" );
 
 	srand( time(NULL) );
@@ -40,9 +39,10 @@ bool GameLayer::init()
 	EventListenerAcceleration* m_aceleration_listener = EventListenerAcceleration::create( CC_CALLBACK_2( GameLayer::onAcelerationHandler, this ) );
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( m_aceleration_listener , 100 );
 
-	this->setAccelerometerEnabled( true );
-
 	this->schedule( schedule_selector( GameLayer::update ) );
+
+	this->setAccelerometerInterval( 1/60.0f);
+	this->setAccelerometerEnabled( true );
 
     return true;
 }
