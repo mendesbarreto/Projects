@@ -26,21 +26,21 @@ private:
 
     SpriteBatchNode* m_batch;
     Size m_screenSize;
-    Array* m_goibaBadPool;
-
+    
+	Array* m_goibaBadPool;
     int m_goibaBadPoolIndex;
     float m_goibaBadTime;
     float m_goibaBadInterval;
 
-	float m_goibaSpeed;
-	float m_goibaTargetX;
-
 	Array* m_goibaGoodPool;
-
 	int m_goibaGoodPoolIndex;
 	float m_goibaGoodTime;
 	float m_goibaGoodInterval;
     
+	float m_goibaSpeed;
+	float m_goibaTargetX;
+	Array* m_objsFalling;
+
     Vector<FiniteTimeAction *> m_goiba_actions;
 
     Sprite* m_background;

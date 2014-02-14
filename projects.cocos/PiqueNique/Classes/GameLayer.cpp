@@ -35,9 +35,11 @@ bool GameLayer::init()
     this->createActions();
 	this->createPlayer();
 
-
 	EventListenerAcceleration* m_aceleration_listener = EventListenerAcceleration::create( CC_CALLBACK_2( GameLayer::onAcelerationHandler, this ) );
 	Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority( m_aceleration_listener , 100 );
+
+	m_objsFalling = Array::create();
+	m_objsFalling->retain();
 
 	this->schedule( schedule_selector( GameLayer::update ) );
 
@@ -52,7 +54,7 @@ void GameLayer::createPlayer()
 	m_player = Character::create( "emilia_narizinho1.png" );
 	m_player->addAnimation( "walk" , Character::createAnimationWithName("emilia_narizinho" , 20, 60 , true ) );
 	m_player->setPosition( ccp( m_player->boundingBox().size.width + 20 , m_player->boundingBox().size.height + 100) );
-	m_player->setPosition( ccp( 200 , 200) );
+	m_player->setPosition( ccp( 200 , 200 ) );
 	
 	this->addChild( m_player );
 }
@@ -91,8 +93,23 @@ void GameLayer::update( float dt )
         m_player->stop();   
 
 	m_player->setPositionX( posX ); 
-}
 
+
+	int i = 0;
+	Rect rect;
+	for( i = 0; i < m_objsFalling->count(); i++ )
+	{
+		Character* cFalling = (Character* ) m_objsFalling->objectAtIndex( i ) ;
+		if( cFalling )
+		{
+			rect = Rect( m_player->getPositionX() , m_player->getPositionY() , m_player->boundingBox().size.width , m_player->boundingBox().size.height/2 );
+			if( rect.containsPoint( cFalling->getPosition() ) )
+			{
+				goibaGoodFinishFalling( cFalling );
+			}
+		}
+	}
+}
 
 void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 {
@@ -220,7 +237,7 @@ void GameLayer::menuCloseCallback(Object* pSender)
 
 void GameLayer::createGoodGoiba()
 {
-	//if( m_goibaGoodPool->count() > 10 ) return;
+	if( m_goibaGoodPool->count() >= 20 ) return;
 
 	int initialPosX = rand() % (int) (m_screenSize.width * 0.8f ) + m_screenSize.width * 0.1f;
 	
@@ -246,6 +263,8 @@ void GameLayer::createGoodGoiba()
 	c->play( actionsRotate );
 	c->runAction( seq );
 
+	m_objsFalling->addObject( c );
+
 	//c->runAction( sequence );
 
 }
@@ -254,10 +273,11 @@ void GameLayer::goibaGoodFinishFalling( Node* pSender )
 {
 	Character* c = (Character* ) pSender;
 	
-	if( pSender )
+	if( c )
 	{
 		c->stopAllActions();
 		c->setVisible(false);
+		m_objsFalling->removeObject( c );
 	}
 
 }
