@@ -87,6 +87,8 @@ void GameLayer::update( float dt )
 
 	if( m_playerSpeed != 0 )
 		m_player->gotoAndPlay("walk");
+    else
+        m_player->stop();   
 
 	m_player->setPositionX( posX ); 
 }

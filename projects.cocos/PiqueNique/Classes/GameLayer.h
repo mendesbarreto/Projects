@@ -50,6 +50,7 @@ private:
 	bool m_left;
 	bool m_right;
 	
+    
 	void update( float dt );
     bool createActions();
     bool createScreen();

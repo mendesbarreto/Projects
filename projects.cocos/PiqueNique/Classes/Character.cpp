@@ -16,6 +16,7 @@ using namespace cocos2d;
 Character::Character( void )
 {
 	m_animations = Dictionary::create();
+    m_animation = "def";
 }
 
 //************************************
@@ -81,7 +82,7 @@ void Character::addAnimation( const char* name, Animation* anim )
 
 void Character::gotoAndPlay( const char* state )
 {
-	if( state == m_animation )
+	if( m_isPlaying && strcmp(state , m_animation) != 0 )
 	{
 		CCLOG( "Animation already has been played" );	
 	}
@@ -97,11 +98,13 @@ void Character::gotoAndPlay( const char* state )
 
 void Character::stop()
 {
+    m_isPlaying = false;
 	this->stopAllActions();
 }
 
 void Character::play()
 {
+    m_isPlaying = true;
 	this->runAction( RepeatForever::create( Animate::create( m_currentAnimation ) ) );
 }
 
@@ -116,6 +119,7 @@ void Character::play( Vector<FiniteTimeAction*> &actions )
 
 void Character::gotoAndStop( const char* state )
 {
+    m_isPlaying = false;
 	this->stopAllActions();
 }
 

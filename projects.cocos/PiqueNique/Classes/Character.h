@@ -20,6 +20,7 @@ private:
     char* m_animation;
 	Animation* m_currentAnimation;
     Dictionary* m_animations;
+    bool m_isPlaying;
     Character(void);
     
 public:
