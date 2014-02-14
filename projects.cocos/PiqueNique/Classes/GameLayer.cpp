@@ -237,7 +237,7 @@ void GameLayer::menuCloseCallback(Object* pSender)
 
 void GameLayer::createGoodGoiba()
 {
-	if( m_goibaGoodPool->count() >= 20 ) return;
+	if( m_objsFalling->count() >= 20 ) return;
 
 	int initialPosX = rand() % (int) (m_screenSize.width * 0.8f ) + m_screenSize.width * 0.1f;
 	
