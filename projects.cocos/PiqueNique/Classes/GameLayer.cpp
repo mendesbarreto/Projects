@@ -85,6 +85,9 @@ void GameLayer::update( float dt )
 		m_playerSpeed = 0;
 	}
 
+	if( m_playerSpeed != 0 )
+		m_player->gotoAndPlay("walk");
+
 	m_player->setPositionX( posX ); 
 }
 
@@ -95,12 +98,10 @@ void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
 	float sensitivity = 8.0f;
 	float maxVelocity = 50;
 
-	//m_playerSpeed =  20 * ( powf ( ( - fabsf( ac->x) + 0.5), 2.0) - 1.25) * ac->y; //(I use sensitivity = 640.0);
-
+	//m_playerSpeed =  10 * ( powf ( ( - fabsf( ac->x) + 0.5), 2.0) - 1.25) * ac->y; //(I use sensitivity = 640.0);
 	m_playerSpeed = m_playerSpeed * deceleration + ac->x * sensitivity ;
 	m_playerSpeed = MAX( MIN( m_playerSpeed , maxVelocity ) , -maxVelocity );
-
-	CCLOG("PlayerSpeed: %f , Accelerometer: %f ", m_playerSpeed , ac->x );
+	//CCLOG("PlayerSpeed: %f , Accelerometer: %f ", m_playerSpeed , ac->x );
 }
 
 
@@ -118,7 +119,7 @@ bool GameLayer::createPools()
 	char falling[30] = "goiba_bad_falling";
 	char buffer[100];
 
-	for ( int i = 1 ; i < 20 ; i++) 
+	for ( int i = 1 ; i < 21 ; i++) 
 	{
 		strcpy(buffer , walk );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );
@@ -143,7 +144,7 @@ bool GameLayer::createPools()
 	strcpy(walk , "goiba_good_waking" );
 	strcpy(falling , "goiba_good_falling" );
 
-	for ( int i = 1 ; i < 20 ; i++) 
+	for ( int i = 1 ; i < 21 ; i++) 
 	{
 		strcpy(buffer , walk );
 		sprintf( buffer , strcat(buffer , "%i.png") , 1 );

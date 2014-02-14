@@ -7,7 +7,6 @@
 //
 
 #include <string>
-
 #include "cocos2d.h"
 #include "Character.h"
 
@@ -56,18 +55,11 @@ Animation* Character::createAnimationWithName( const char* sequenceName,
 	for (i = 1; i < framesNumber+1; i ++ )
 	{
 		strcpy(buffer , "");
-		sprintf(buffer , name , i );
+		sprintf(buffer , name , i , sizeof( buffer )-1 );
 		frame = SpriteFrameCache::getInstance()->getSpriteFrameByName( buffer );
 
-		if( !frame )
-		{
-			sprintf(buffer , strcat("Some frame is not found: " , buffer ) );
-			throw buffer;
-		}
-		else
-		{
-			anim->addSpriteFrame( frame );
-		}
+		CC_ASSERT( frame != NULL );
+		anim->addSpriteFrame( frame );
 	}
 
 	anim->setDelayPerUnit( 1 / delay );
@@ -79,32 +71,28 @@ Animation* Character::createAnimationWithName( const char* sequenceName,
 
 void Character::addAnimation( const char* name, Animation* anim )
 {
-	if( !anim  )
-	{
-		throw "Animation could not be NULL";
-	}
-	else
-	{
-		m_currentAnimation = anim;
-		m_animations->setObject( anim, name );
-		m_animations->retain();
-	}
+	CC_ASSERT( anim != NULL );
+	
+	m_currentAnimation = anim;
+	m_animations->setObject( anim, name );
+	m_animations->retain();
+	
 }
 
 void Character::gotoAndPlay( const char* state )
 {
-	Animation* anim = (Animation *) m_animations->objectForKey( state );
-	
-	if(!anim)
+	if( state == m_animation )
 	{
-		throw "Animation not exists";
+		CCLOG( "Animation already has been played" );	
 	}
 	else
 	{
-		m_currentAnimation = anim;
-		
-		play();
+		Animation* anim = (Animation *) m_animations->objectForKey( state );
+		CC_ASSERT( anim != NULL );
+		m_currentAnimation = anim;	
+		play();	
 	}
+	
 }
 
 void Character::stop()
@@ -121,9 +109,9 @@ void Character::play( Vector<FiniteTimeAction*> &actions )
 {
 	Sequence* sequence = Sequence::create(actions );
 	this->stopAllActions();
-
-	this->runAction( RepeatForever::create( Animate::create( m_currentAnimation )  ) );
 	this->runAction( RepeatForever::create( sequence )	 );
+
+	this->play();
 }
 
 void Character::gotoAndStop( const char* state )
