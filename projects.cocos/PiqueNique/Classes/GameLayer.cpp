@@ -55,7 +55,7 @@ void GameLayer::createPlayer()
 	m_player->addAnimation( "walk" , Character::createAnimationWithName("emilia_narizinho" , 20, 60 , true ) );
 	m_player->setPosition( ccp( m_player->boundingBox().size.width + 20 , m_player->boundingBox().size.height + 100) );
 	m_player->setPosition( ccp( 200 , 200 ) );
-	
+
 	this->addChild( m_player );
 }
 
@@ -93,19 +93,21 @@ void GameLayer::update( float dt )
         m_player->stop();   
 
 	m_player->setPositionX( posX ); 
-
+	m_bucket = Rect( m_player->getPositionX() - 74.5f , m_player->getPositionY() - 33.5 , 149, 67 );
 
 	int i = 0;
-	Rect rect;
+
 	for( i = 0; i < m_objsFalling->count(); i++ )
 	{
 		Character* cFalling = (Character* ) m_objsFalling->objectAtIndex( i ) ;
 		if( cFalling )
 		{
-			rect = Rect( m_player->getPositionX() , m_player->getPositionY() , m_player->boundingBox().size.width , m_player->boundingBox().size.height/2 );
-			if( rect.containsPoint( cFalling->getPosition() ) )
+			//rect = Rect( pBound.getMaxX() , pBound.getMaxY() , pBound.size.width , -pBound.size.height * 0.5 );
+			
+			if( m_bucket.containsPoint( cFalling->getPosition() ) )
 			{
 				goibaGoodFinishFalling( cFalling );
+				CCLOG( "GOIBA REMOVIDA" );
 			}
 		}
 	}

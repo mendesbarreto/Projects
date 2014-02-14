@@ -45,6 +45,7 @@ private:
 
     Sprite* m_background;
     Character* m_player;
+	Rect m_bucket;
 	float m_playerSpeed;
     
 	bool m_left;
