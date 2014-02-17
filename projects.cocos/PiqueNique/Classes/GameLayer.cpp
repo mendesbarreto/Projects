@@ -119,7 +119,7 @@ void GameLayer::update( float dt )
 
 	if ( m_score != (int)m_pointsLabelD->getString().c_str() )
 	{
-		m_pointsLabelD->setString( m_score );
+		//m_pointsLabelD->setString( m_score );
 	}
 
 }
