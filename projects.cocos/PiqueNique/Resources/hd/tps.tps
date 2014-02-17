@@ -168,6 +168,7 @@
         <array>
             <filename>C:/Users/douglas/Desktop/Piquinique/goiaba_good</filename>
             <filename>C:/Users/douglas/Desktop/Piquinique/goiba_bad</filename>
+            <filename>C:/Users/douglas/Desktop/Piquinique/coletoras</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

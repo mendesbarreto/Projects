@@ -23,6 +23,11 @@ public:
     
     
 private:
+	int m_score;
+	LabelTTF* m_pointsLabelF;
+	LabelTTF* m_pointsLabelD;
+
+	float m_scaleFactor;
 
     SpriteBatchNode* m_batch;
     Size m_screenSize;
@@ -61,6 +66,7 @@ private:
 
 	void createGoodGoiba();
 	void goibaGoodFinishFalling( Node* pSender );
+	void goibaGoodDone( Node* pSender );
 	void createPlayer();
 };
 

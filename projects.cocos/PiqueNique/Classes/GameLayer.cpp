@@ -1,5 +1,7 @@
 #include "GameLayer.h"
 #include "Character.h"
+#include <string>
+
 USING_NS_CC;
 
 Scene* GameLayer::createScene()
@@ -27,6 +29,7 @@ bool GameLayer::init()
         return false;
     }
 	SpriteFrameCache::getInstance()->addSpriteFramesWithFile( "piquenique.plist" );
+
 
 	srand( time(NULL) );
 
@@ -106,11 +109,19 @@ void GameLayer::update( float dt )
 			
 			if( m_bucket.containsPoint( cFalling->getPosition() ) )
 			{
-				goibaGoodFinishFalling( cFalling );
+				goibaGoodDone( cFalling );
+				m_score += 15;
 				CCLOG( "GOIBA REMOVIDA" );
 			}
 		}
 	}
+
+
+	if ( m_score != (int)m_pointsLabelD->getString().c_str() )
+	{
+		m_pointsLabelD->setString( m_score );
+	}
+
 }
 
 void GameLayer::onAcelerationHandler( Acceleration* ac , Event* event )
@@ -215,6 +226,7 @@ bool GameLayer::createActions()
 bool GameLayer::createScreen()
 {
     m_screenSize = Director::sharedDirector()->getWinSize();
+
     SpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("piquenique.plist");
     m_batch = SpriteBatchNode::create( "piquenique.png" );
     this->addChild(m_batch);
@@ -225,6 +237,19 @@ bool GameLayer::createScreen()
                                    , m_background->boundingBox().size.height * 0.5f));
     this->addChild(m_background);
     
+	m_score = 0;
+
+	m_pointsLabelF = LabelTTF::create("Points:" , "Marker Felt" , 70.0f );
+
+	Size labelSize =   m_pointsLabelF->boundingBox().size;
+	m_pointsLabelF->setPosition( ccp( labelSize.width * 0.5 , m_screenSize.height * 0.85 - labelSize.height ) );
+	this->addChild( m_pointsLabelF );
+
+	m_pointsLabelD = LabelTTF::create("0" , "Marker Felt" , 70.0f );
+	m_pointsLabelD->setPosition( ccp( m_pointsLabelF->boundingBox().size.width + m_pointsLabelF->getPositionX(),  m_screenSize.height * 0.85 - labelSize.height )  );
+
+	this->addChild( m_pointsLabelD );
+
     return true;
 }
 
@@ -273,15 +298,20 @@ void GameLayer::createGoodGoiba()
 
 void GameLayer::goibaGoodFinishFalling( Node* pSender )
 {
-	Character* c = (Character* ) pSender;
 	
+
+}
+
+void GameLayer::goibaGoodDone( Node* pSender )
+{
+	Character* c = (Character* ) pSender;
+
 	if( c )
 	{
 		c->stopAllActions();
 		c->setVisible(false);
 		m_objsFalling->removeObject( c );
 	}
-
 }
 
 
